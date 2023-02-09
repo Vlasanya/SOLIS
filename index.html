@@ -7,19 +7,14 @@
     <title>SOLIS</title>
     <link rel="icon" type="image/x-icon" href="./assets/img/favicon.ico">
     <link rel="stylesheet" href="./css/main.css">
-    <!-- <link rel="stylesheet" href="./css/main_dark.css"> -->
 </head>
 <body>
     <div class="wrapper-banner">
         <header class="header">
             <div class="container d-flex">
                 <div class="logo">
-                    <svg class="logo-img">
-                        <use href="./sprite.svg#logo-img"></use>
-                    </svg>
-                    <svg class="logo-txt">
-                        <use href="./sprite.svg#logo"></use>
-                    </svg>
+                    <svg class="logo-img"></svg>
+                    <svg class="logo-txt"></svg>
                 </div>
                 <div class="menu-wrapper">
                     <input id="menu-toggle" type="checkbox">
@@ -123,7 +118,7 @@
                     </div>
                 </div>
             </section>
-            <section>
+            <section class="benefits">
                 <div class="row row-section">
                     <div class="col-border col">
                         <h3>Qualified <span class="span">traders</span> and liquidty <span class="span">solutions</span></h3>
@@ -232,9 +227,9 @@
                     <h3>Contact <span class="span">our sales team</span></h3>
                     <p>Our team is happy to answer your sales questions. Fill out the form and we’ll be in touch as soon as possible.</p>
                 </div>
-                <div class="contact contact__col col form">
+                <div class="contact__col form">
                     <form action="#" class="contact__form">
-                        <input type="text" id="fname" name="fname" value="John" placeholder="Your name" required class="form__input">
+                        <input type="text" id="fname" name="fname" placeholder="Your name" required class="form__input">
         
                         <input type="email" id="email" name="email" placeholder="Email" required class="form__input">
                        

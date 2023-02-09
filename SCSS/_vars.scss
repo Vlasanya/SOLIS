@@ -26,6 +26,9 @@ $bg-color: #161926;
     --bg-img-mob: url('../assets/img/first-screen-image-phone.png');
     --quotes: url('../assets/img/svg/quote-icon.svg');
     --bg-gradient:linear-gradient(183.11deg, rgba(255, 255, 255, 0) 46.73%, #FFFFFF 63.21%);
+    --logo-img: url(../assets/img/svg/logo-img-dark.svg);
+    --logo-txt: url(../assets/img/svg/logo-dark.svg);
+
 }
 
 :root:has(#dark:checked) {
@@ -46,5 +49,14 @@ $bg-color: #161926;
     --bg-img-mob: url('../assets/img/first-screen-image-dark-phone.png');
     --quotes: url('../assets/img/svg/quote-icon-dark.svg');
     --bg-gradient: linear-gradient(183.11deg, rgba(22, 25, 38, 0) 46.73%, #161926 63.21%);
+    --logo-img: url(../assets/img/svg/logo-img.svg);
+    --logo-txt: url(../assets/img/svg/logo.svg);
 }
-
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px
+);
