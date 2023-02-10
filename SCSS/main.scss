@@ -284,7 +284,7 @@ body {
     max-width: 523px;
 }
 h1 {
-    font-family: 'Playfair Display', serif;
+    font-family: $second-fontfam;
     font-weight: 400;
     font-style: normal;
     font-size: 2.75rem;
@@ -452,7 +452,7 @@ p {
         }
     }
     .doll {
-        font-family: 'Playfair Display', serif;
+        font-family: $second-fontfam;
         font-style: normal;
         font-weight: 400;
         font-size: 2.5rem;
@@ -461,7 +461,7 @@ p {
         color: var(--border-gray);
     }
     &__item {
-        font-family: 'Playfair Display',serif;
+        font-family: $second-fontfam;
         font-style: normal;
         font-weight: 400;
         font-size: 2.5rem;
@@ -516,7 +516,7 @@ p {
     gap: 30px;
 
     h3 {
-        font-family: 'Playfair Display',serif;
+        font-family: $second-fontfam;
         font-style: normal;
         font-weight: 400;
         font-size: 2.5rem;
@@ -563,12 +563,9 @@ p {
 // section quote start======================
 .quote {
     background-image: url(../assets/img/quote-background.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
+    @include bg(cover, no-repeat, center);
     width: 100%;
-    display: flex;
-    align-items: center;
+    @include d-flex(row, center, normal);
     margin-bottom: 100px;
     padding: 100px 200px 100px 100px;
     
@@ -594,7 +591,7 @@ p {
             margin-bottom: 40px;
         }
         h4 {
-            font-family: 'Playfair Display', serif;
+            font-family: $second-fontfam;
             font-style: italic;
             font-weight: 400;
             font-size: 1.25rem;
@@ -746,13 +743,10 @@ p {
 }
 .player {
     position: relative;
-
     &__play {
         position: absolute;
         min-width: 100%;
         min-height: 100%;
-        background: url(../assets/imgs/svg/screensave.svg) no-repeat;
-        background-size: cover;
         cursor: pointer;
 
         &:has(.player__input:checked) {
@@ -764,7 +758,6 @@ p {
             }
         }
     }
-
     &__input {
         opacity: 0;
         position: absolute;
@@ -794,9 +787,7 @@ p {
         max-height: 450px;
         right: 0;
         top: 8%;
-        display: flex;
-        justify-content: space-between;
-
+        @include d-flex(row, normal, space-between);
         background: var(--bg-color);
         opacity: 0.9;
         padding: 75px 0 75px 70px;
@@ -823,7 +814,7 @@ p {
         align-items: flex-start;
         gap: 70px;
         h4 {
-            font-family: 'Playfair Display', serif;
+            font-family: $second-fontfam;
             font-style: normal;
             font-weight: 400;
             font-size: 1.5rem;
@@ -859,16 +850,11 @@ p {
     }
     &__card {
         width: 100%;
-        background-color: #191c2999;
-        
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center;
+        @include bg(cover, no-repeat,center);
         max-width: 370px;
         padding: 30px 40px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
+        @include d-flex(column, normal, space-between);
+        
         img {
             display: inline-block;
             position: absolute;
@@ -883,10 +869,10 @@ p {
             opacity: 0.8;
         }
         h6 {
-            font-family: 'Playfair Display', serif;
+            font-family: $second-fontfam;
             font-style: italic;
             font-weight: 400;
-            font-size: 20px;
+            font-size: 1.25rem;
             line-height: 1;
             letter-spacing: 0.08em;
             color: #FFFFFF;
@@ -917,9 +903,7 @@ p {
     &__form {
         width: 100%;
         max-width: 470px;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
+        @include d-flex(column, flex-start, normal);
         @media screen  and (max-width:992px) {
             align-items: center;
         }
@@ -932,19 +916,13 @@ p {
                 border: none;
                 background: none;
                 border-bottom: 1px solid var(--font-color);
-                font-family: 'Playfair Display',serif;
+                font-family: $second-fontfam;
                 font-style: italic;
                 font-weight: 400;
-                font-size: 18px;
-                line-height: 20px;
-                /* identical to box height, or 111% */
-
+                font-size: 1.125rem;
+                line-height: 1.11;
                 letter-spacing: 0.08em;
-
-                /* Primary / Dark blue */
-
                 color: var(--font-color);
-
                 opacity: 0.5;
                 margin-bottom: 40px;
                 padding-bottom: 12px;
@@ -963,7 +941,7 @@ p {
 .footer {
     
     &__container{
-    border-top: 1px solid var(--border-gray);
+    border-top: 1px solid var(--tablet-gray);
     padding-top: 30px;
     @media screen  and (max-width: 992px) {
         flex-direction: row;
@@ -979,28 +957,17 @@ p {
         }
     }
     }
-    p {
+    & > p {
         font-weight: 300;
-        font-size: 14px;
-        line-height: 26px;
-        /* identical to box height, or 186% */
-
-
-        /* Primary / Dark blue */
-
+        font-size: 0,875rem;
+        line-height: 1.86;
         color: var(--font-color);
-
         opacity: 0.6;
     }
     a {
-        font-size: 14px;
-        line-height: 24px;
-        /* identical to box height, or 171% */
-
+        font-size: 0.875rem;
+        line-height: 1.71;
         letter-spacing: 0.08em;
-
-        /* Primary / Dark blue */
-
         color: var(--font-color);
         text-decoration: none;
     }

@@ -1042,7 +1042,9 @@ p {
   background-position: center;
   width: 100%;
   display: flex;
+  flex-direction: row;
   align-items: center;
+  justify-content: normal;
   margin-bottom: 100px;
   padding: 100px 200px 100px 100px;
 }
@@ -1255,8 +1257,6 @@ p {
   position: absolute;
   min-width: 100%;
   min-height: 100%;
-  background: url(../assets/imgs/svg/screensave.svg) no-repeat;
-  background-size: cover;
   cursor: pointer;
 }
 .player__play:has(.player__input:checked) {
@@ -1294,6 +1294,8 @@ p {
   right: 0;
   top: 8%;
   display: flex;
+  flex-direction: row;
+  align-items: normal;
   justify-content: space-between;
   background: var(--bg-color);
   opacity: 0.9;
@@ -1359,7 +1361,6 @@ p {
 }
 .reviews__card {
   width: 100%;
-  background-color: rgba(25, 28, 41, 0.6);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -1367,6 +1368,7 @@ p {
   padding: 30px 40px;
   display: flex;
   flex-direction: column;
+  align-items: normal;
   justify-content: space-between;
 }
 .reviews__card img {
@@ -1386,7 +1388,7 @@ p {
   font-family: "Playfair Display", serif;
   font-style: italic;
   font-weight: 400;
-  font-size: 20px;
+  font-size: 1.25rem;
   line-height: 1;
   letter-spacing: 0.08em;
   color: #FFFFFF;
@@ -1422,6 +1424,7 @@ p {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  justify-content: normal;
 }
 @media screen and (max-width: 992px) {
   .contact__form {
@@ -1440,11 +1443,9 @@ p {
   font-family: "Playfair Display", serif;
   font-style: italic;
   font-weight: 400;
-  font-size: 18px;
-  line-height: 20px;
-  /* identical to box height, or 111% */
+  font-size: 1.125rem;
+  line-height: 1.11;
   letter-spacing: 0.08em;
-  /* Primary / Dark blue */
   color: var(--font-color);
   opacity: 0.5;
   margin-bottom: 40px;
@@ -1460,7 +1461,7 @@ p {
 }
 
 .footer__container {
-  border-top: 1px solid var(--border-gray);
+  border-top: 1px solid var(--tablet-gray);
   padding-top: 30px;
 }
 @media screen and (max-width: 992px) {
@@ -1480,21 +1481,17 @@ p {
     margin-bottom: 10px;
   }
 }
-.footer p {
+.footer > p {
   font-weight: 300;
-  font-size: 14px;
-  line-height: 26px;
-  /* identical to box height, or 186% */
-  /* Primary / Dark blue */
+  font-size: 0, 875rem;
+  line-height: 1.86;
   color: var(--font-color);
   opacity: 0.6;
 }
 .footer a {
-  font-size: 14px;
-  line-height: 24px;
-  /* identical to box height, or 171% */
+  font-size: 0.875rem;
+  line-height: 1.71;
   letter-spacing: 0.08em;
-  /* Primary / Dark blue */
   color: var(--font-color);
   text-decoration: none;
 }
